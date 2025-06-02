@@ -60,6 +60,5 @@ for (let i = 0; i < totalQuestions; i++) {
     answerCount++;
   }
 }
-
 console.log(`Thank You!! You answered ${answerCount} out of ${totalQuestions} correctly. Have a nice Day`);
 
