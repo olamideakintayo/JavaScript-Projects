@@ -35,7 +35,7 @@ function askQuestion() {
       continue;
     }
     if (answerNumber === problem.answer) {
-      const timeTaken = ((Date.now() - startTime) / 1000).toFixed(2);
+      const timeTaken = ((Date.now() - startTime)).toFixed(2);
       console.log(`Correct! Time taken: ${timeTaken} seconds`);
       answerCount++;
       return;
