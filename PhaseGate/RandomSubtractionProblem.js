@@ -36,18 +36,18 @@ function questionAsk() {
     }
     if (answerNumber === problem.answer) {
       const timeTaken = ((Date.now() - startTime) / 1000).toFixed(2);
-      console.log(`Correct! Time taken: ${timeTaken} seconds`);
+      console.log(`You are Correct! The Time taken is: ${timeTaken} seconds`);
       answerCount++;
       return;
     } else {
       attemptsLeft--;
       if (attemptsLeft > 0) {
-        console.log(`Wrong! Try again. Attempts left: ${attemptsLeft}`);
+        console.log(`You are Wrong! Please Try again. The Attempts left is: ${attemptsLeft}`);
       }
         else {
         const timeTaken = ((Date.now() - startTime)/ 1000).toFixed(2);
-        console.log(`Wrong again. The correct answer was ${problem.answer}.`);
-        console.log(`Time taken: ${timeTaken} seconds`);
+        console.log(`You're Wrong again. The correct answer was ${problem.answer}.`);
+        console.log(`The Time taken is: ${timeTaken} seconds`);
       } 
      }
   }
