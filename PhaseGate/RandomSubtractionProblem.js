@@ -19,7 +19,7 @@ answer:  minuend - subtrahend
 };
 }
 
-function askQuestion() {
+function questionAsk() {
   const problem = randomSubtractionProblem();
   console.log(problem.question);
 
@@ -35,7 +35,7 @@ function askQuestion() {
       continue;
     }
     if (answerNumber === problem.answer) {
-      const timeTaken = ((Date.now() - startTime)).toFixed(2);
+      const timeTaken = ((Date.now() - startTime) / 1000).toFixed(2);
       console.log(`Correct! Time taken: ${timeTaken} seconds`);
       answerCount++;
       return;
@@ -45,7 +45,7 @@ function askQuestion() {
         console.log(`Wrong! Try again. Attempts left: ${attemptsLeft}`);
       }
         else {
-        const timeTaken = ((Date.now() - startTime) / 1000).toFixed(2);
+        const timeTaken = ((Date.now() - startTime)/ 1000).toFixed(2);
         console.log(`Wrong again. The correct answer was ${problem.answer}.`);
         console.log(`Time taken: ${timeTaken} seconds`);
       } 
@@ -55,7 +55,7 @@ function askQuestion() {
 
 
 for (let i = 0; i < totalQuestions; i++) {
-  const correct = askQuestion();
+  const correct = questionAsk();
   if (correct) {
     answerCount++;
   }
